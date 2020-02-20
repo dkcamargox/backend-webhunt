@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const mongoosePaginate = require("mongoose-paginate");
+//ESQUEMA DO QUE VAI PRO DB
 const ProductSchema = new mongoose.Schema({
     title: {
         type: String,

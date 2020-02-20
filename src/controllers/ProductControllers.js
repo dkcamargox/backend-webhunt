@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const Product = mongoose.model("Product");
-
+//AQUI FICAM AS FUNÇÕES QUE CONTROLAM AS ROTAS
 module.exports = {
     async index(req , res) {
         const { page = 1 } = req.query;
@@ -10,11 +10,7 @@ module.exports = {
         return res.json(product);
     },
     async store (req , res) {
-        const product = await Product.create({
-            "title": "JavaScript2",
-            "description": "Linguagem de programação que tornou tudo possivel",
-            "url": "https://www.javascript.com"
-        });
+        const product = await Product.create(req.body);
 
         return res.json(product);
     },

@@ -1,7 +1,7 @@
 const express = require("express");
-const routes = express.Router();
+const routes = express.Router(); //é daqui que sai as rotas 
 const ProductController = require("./controllers/ProductControllers");
-
+//AQUI FICAM AS ROTAS
 
 routes.get("/products" , ProductController.index );
 routes.post("/products" , ProductController.store );
