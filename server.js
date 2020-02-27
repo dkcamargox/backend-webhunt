@@ -17,5 +17,5 @@ reqDir("./src/models");
 //DEFININDO QUE A APLICAÇÃO VAI USAR AS ROTAS DO ARQUIVO ROUTES
 app.use("/api" , require("./src/routes"));
 
-app.listen(3001);
+app.listen( process.env.PORT || 3001);
 
